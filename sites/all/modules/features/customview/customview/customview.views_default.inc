@@ -29,8 +29,8 @@ function customview_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_accordion';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
@@ -181,12 +181,16 @@ function customview_views_default_views() {
   $handler->display->display_options['fields']['field_question']['table'] = 'field_data_field_question';
   $handler->display->display_options['fields']['field_question']['field'] = 'field_question';
   $handler->display->display_options['fields']['field_question']['relationship'] = 'reverse_field_faq__node';
+  $handler->display->display_options['fields']['field_question']['label'] = '';
   $handler->display->display_options['fields']['field_question']['element_label_type'] = 'h4';
+  $handler->display->display_options['fields']['field_question']['element_label_colon'] = FALSE;
   /* Field: Content: Answer */
   $handler->display->display_options['fields']['field_answer']['id'] = 'field_answer';
   $handler->display->display_options['fields']['field_answer']['table'] = 'field_data_field_answer';
   $handler->display->display_options['fields']['field_answer']['field'] = 'field_answer';
   $handler->display->display_options['fields']['field_answer']['relationship'] = 'reverse_field_faq__node';
+  $handler->display->display_options['fields']['field_answer']['label'] = '';
+  $handler->display->display_options['fields']['field_answer']['element_label_colon'] = FALSE;
   /* Field: Draggableviews: Content */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';

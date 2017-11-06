@@ -1,0 +1,5 @@
+<?php
+function aarp_core_update_7001() {
+  module_enable(array('customview'), TRUE);
+  return 'Enabled FAQ feature module & creating FAQ Type terms.';
+}

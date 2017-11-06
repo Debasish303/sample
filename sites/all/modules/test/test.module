@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function test_menu() {
+  $items = array();
+
+  // Get Node Display Mode Markup
+  // Returns the rendered html for a node in a specified view mode. This is
+  // typically used with ajax to display components on a page.
+  $items['test'] = array(
+    'title' => 'Get Node Display Mode Markup',
+    'description' => 'Get the rendered node for the given display mode.',
+    'page callback' => 'test_get_node',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function test_get_node() {
+	return drupal_set_message('This is a test message from the module');
+}
