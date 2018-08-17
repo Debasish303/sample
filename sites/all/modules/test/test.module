@@ -19,7 +19,9 @@ function test_menu() {
 
   return $items;
 }
-
+/**
+ * this is for node only
+ */
 function test_get_node() {
 	return drupal_set_message('This is a test message from the module');
 }
